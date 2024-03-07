@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: node-app2
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: node-app2 
+  name: node-app2
+spec:
+  ports:
+  - port: 3001 
+    targetPort: 3001 
+  selector:
+    app.kubernetes.io/instance: node-app2 
